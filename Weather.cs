@@ -7,33 +7,55 @@ namespace LemonadeStand
     public class Weather
     {
         //member variables
-        int temp;
-        string forecast;
+        int forecastedTemp;
+        string forecastedCondition;
+        int actualTemp;
+        string actualCondition;
+
         public List<string> WeatherConditions = new List<string> { "Cloudy", "Sunny", "Rainy", "Hazy", "Hot and Humid" };
 
         //constructor
         public Weather()
         {
-            int temp = 0;
-            forecast = null;
-            string[] WeatherConditions = { "Cloudy", "Sunny", "Rainy", "Hazy", "Hot and Humid" };
-            ActualWeather();
+
+            GetForecastedTemp();
+            GetForecastedCondition();
+            GetActualTemp();
+            GetActualCondition();
+
+
+
+            //ActualWeather();
+            //ActualTemp();
 
         }
         //member methods
-        public void ActualWeather()
+        public void GetForecastedCondition()
         {
             Random rng = new Random();
-            string[] WeatherConditions = { "Cloudy", "Sunny", "Rainy", "Hazy", "Hot and Humid" };
-            int mIndex = rng.Next(WeatherConditions.Length);
+            int mIndex = rng.Next(WeatherConditions.Count);
+            forecastedCondition = WeatherConditions[mIndex];
         }
 
-        public int ActualTemp()
+        public void GetForecastedTemp()
         {
-            Random temp = new Random();
-            Console.WriteLine(temp.Next(60, 80));
-            return ActualTemp();
+            Random rng = new Random();
+            forecastedTemp = rng.Next(60,91);
         }
+
+        public void GetActualTemp()
+        {
+            Random rng = new Random();
+            actualTemp = rng.Next(forecastedTemp - 5, forecastedTemp + 6);
+        }
+
+        public void GetActualCondition()
+        {
+            Random rng = new Random();
+            int mIndex = rng.Next(WeatherConditions.Count);
+            actualCondition = WeatherConditions[mIndex];
+        }
+
     }
 
 }

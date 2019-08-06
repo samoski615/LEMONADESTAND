@@ -4,7 +4,23 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    class Inventory
+    public class Inventory
     {
-    }
+        //member variables
+        int PaperCups;
+        int Lemons;
+        int Sugar;
+        int IceCubes;
+        double Money;
+
+        //constructor
+        public Inventory()
+        {
+           
+        }
+        
+        //member methods
+
+        
+    }  
 }

@@ -10,6 +10,7 @@ namespace LemonadeStand
         {
 
             Weather weather = new Weather();
+            
             Console.WriteLine("It's my Lemonade Stand Beeeeeotch!");
             
         }
