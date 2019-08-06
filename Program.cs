@@ -4,9 +4,18 @@ namespace LemonadeStand
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+
+            Weather weather = new Weather();
+            Console.WriteLine("It's my Lemonade Stand Beeeeeotch!");
+            
         }
+
+
+
+
     }
 }
