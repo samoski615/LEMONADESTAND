@@ -17,24 +17,17 @@ namespace LemonadeStand
         //constructor
         public Weather()
         {
-
             GetForecastedTemp();
             GetForecastedCondition();
             GetActualTemp();
             GetActualCondition();
-
-
-
-            //ActualWeather();
-            //ActualTemp();
-
         }
         //member methods
         public void GetForecastedCondition()
         {
             Random rng = new Random();
-            int mIndex = rng.Next(WeatherConditions.Count);
-            forecastedCondition = WeatherConditions[mIndex];
+            int conditions = rng.Next(WeatherConditions.Count);
+            forecastedCondition = WeatherConditions[conditions];
         }
 
         public void GetForecastedTemp()
@@ -52,8 +45,8 @@ namespace LemonadeStand
         public void GetActualCondition()
         {
             Random rng = new Random();
-            int mIndex = rng.Next(WeatherConditions.Count);
-            actualCondition = WeatherConditions[mIndex];
+            int conditions = rng.Next(WeatherConditions.Count);
+            actualCondition = WeatherConditions[conditions];
         }
 
     }
