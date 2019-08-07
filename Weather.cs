@@ -12,7 +12,7 @@ namespace LemonadeStand
         int actualTemp;
         string actualCondition;
 
-        public List<string> WeatherConditions = new List<string> { "Cloudy", "Sunny", "Rainy", "Hazy", "Hot and Humid" };
+        List<string> WeatherConditions = new List<string> { "Cloudy", "Sunny", "Rainy", "Humid" };
 
         //constructor
         public Weather()
