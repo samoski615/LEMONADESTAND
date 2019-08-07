@@ -7,10 +7,10 @@ namespace LemonadeStand
     public class Weather
     {
         //member variables
-        int forecastedTemp;
-        string forecastedCondition;
-        int actualTemp;
-        string actualCondition;
+        int ForecastedTemp;
+        string ForecastedCondition;
+        int ActualTemp;
+        string ActualCondition;
 
         List<string> WeatherConditions = new List<string> { "Cloudy", "Sunny", "Rainy", "Humid" };
 
@@ -27,26 +27,26 @@ namespace LemonadeStand
         {
             Random rng = new Random();
             int conditions = rng.Next(WeatherConditions.Count);
-            forecastedCondition = WeatherConditions[conditions];
+            ForecastedCondition = WeatherConditions[conditions];
         }
 
         public void GetForecastedTemp()
         {
             Random rng = new Random();
-            forecastedTemp = rng.Next(60,91);
+            ForecastedTemp = rng.Next(60,91);
         }
 
         public void GetActualTemp()
         {
             Random rng = new Random();
-            actualTemp = rng.Next(forecastedTemp - 5, forecastedTemp + 6);
+            ActualTemp = rng.Next(ForecastedTemp - 5, ForecastedTemp + 6);
         }
 
         public void GetActualCondition()
         {
             Random rng = new Random();
             int conditions = rng.Next(WeatherConditions.Count);
-            actualCondition = WeatherConditions[conditions];
+            ActualCondition = WeatherConditions[conditions];
         }
 
     }

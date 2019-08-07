@@ -18,13 +18,13 @@ namespace LemonadeStand
         public Customer()
         {
             //_ = new Weather();
-            DailyWeatherTemp();
+            //DailyWeatherTemp();
             DailyWeatherConditions();
             ChanceOfBuying();
         }
 
         //member methods
-        public void DailyWeatherTemp()
+        public void DailyWeatherTemp(int tempRange1, int tempRange2)
         {
             Random rng = new Random();
             DailyTemp = rng.Next(60, 91);
@@ -33,11 +33,11 @@ namespace LemonadeStand
         public void DailyWeatherConditions()
         {
             Random rng = new Random();
-            int conditions = rng.Next(WeatherConditions.Count);
-            ActualConditions = WeatherConditions[conditions];
+            int Conditions = rng.Next(WeatherConditions.Count);
+            ActualConditions = WeatherConditions[Conditions];
         }
 
-        public void ChanceOfBuying()
+        public void PercentageChanceOfBuying(int range1, int range2)
         {
             Random rng = new Random();
             PercentChanceOfBuying = rng.Next(1, 101);
@@ -48,7 +48,35 @@ namespace LemonadeStand
             return true;
         }
 
+        public void ChanceOfBuying()
+        {
 
+            if (ActualConditions == "Cloudy")
+            {
+                PercentageChanceOfBuying(33, 66);
+            }
+            else if (ActualConditions == "Sunny")
+            {
+                PercentageChanceOfBuying(70, 101);
+            }
+            else if (ActualConditions == "Rainy")
+            {
+                PercentageChanceOfBuying(1, 45);
+            }
+            else if (ActualConditions == "Humid")
+            {
+                PercentageChanceOfBuying(85, 101);
+            }
+            else
+            {
+
+            }
+
+        }    
+
+            
+
+        
 
 
 
