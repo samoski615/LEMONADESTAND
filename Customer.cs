@@ -9,45 +9,50 @@ namespace LemonadeStand
         //member variables
         public int PercentChanceOfBuying;
         public int DailyTemp;
-        public string ActualCondition;
+        public string ActualConditions;
+        public bool WillBuyLemonade;
 
         List<string> WeatherConditions = new List<string> { "Cloudy", "Sunny", "Rainy", "Humid" };
 
         //constructor
         public Customer()
         {
-            //BuyLemonade();
+            //_ = new Weather();
             DailyWeatherTemp();
             DailyWeatherConditions();
-            _ = new Weather();
+            ChanceOfBuying();
         }
 
         //member methods
         public void DailyWeatherTemp()
         {
             Random rng = new Random();
-            DailyTemp= rng.Next(60, 91);
+            DailyTemp = rng.Next(60, 91);
         }
 
         public void DailyWeatherConditions()
         {
             Random rng = new Random();
             int conditions = rng.Next(WeatherConditions.Count);
-            ActualCondition = WeatherConditions[conditions];
+            ActualConditions = WeatherConditions[conditions];
         }
 
-        //public void BuyLemonade()
-        //{
-        //    Random rng = new Random();
-        //    PercentChanceOfBuying = rng.Next(1, 101);
-        //    if ( <= 70 && )
-        //    {
+        public void ChanceOfBuying()
+        {
+            Random rng = new Random();
+            PercentChanceOfBuying = rng.Next(1, 101);
+        }
 
-        //    }
-        //}
+        public static bool BuyLemonade()
+        {
+            return true;
+        }
 
-        
-        
+
+
+
+
+
     }
 
 
