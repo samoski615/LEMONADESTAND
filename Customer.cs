@@ -7,7 +7,7 @@ namespace LemonadeStand
     class Customer
     {
         //member variables
-        public int PercentChanceOfBuying;
+        public int PercentChanceOfBuying; //create baseline parameters for customer to insert into methods(percent range)
         public int DailyTemp;
         public string ActualConditions;
         public bool WillBuyLemonade;
@@ -17,9 +17,11 @@ namespace LemonadeStand
         //constructor
         public Customer()
         {
-            //_ = new Weather();
+            Weather weather = new Weather();
+            //Weather.GetActualTemp();
             //DailyWeatherTemp();
-            DailyWeatherConditions();
+            //DailyWeatherConditions();
+            weather.GetActualTemp();
             ChanceOfBuying();
         }
 
@@ -48,11 +50,12 @@ namespace LemonadeStand
             return true;
         }
 
-        public void ChanceOfBuying()
+        public void ChanceOfBuying(Weather weather, Inventory inventory)
         {
 
             if (ActualConditions == "Cloudy")
-            {
+                if (GetActualTemp(60, 101))
+                {
                 PercentageChanceOfBuying(33, 66);
             }
             else if (ActualConditions == "Sunny")
