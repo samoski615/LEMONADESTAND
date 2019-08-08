@@ -12,10 +12,17 @@ namespace LemonadeStand
         //constructor
         public Game()
         {
-            Customer customer = new Customer();
-            Customer.BuyLemonade();
+            //Customer customer = new Customer();
+            //Customer.BuyLemonade();
+            UserInterface.DisplayTheRules();
+            Day day = new Day();
+            day.HowManyDays();
         }
 
+        //member methods
+        public void RunGame()  //start the game
+        {
 
+        }
     }
 }

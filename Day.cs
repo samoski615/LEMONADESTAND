@@ -4,7 +4,23 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    class Day
+    public class Day
     {
+        //member variables
+        private int NumberOfDays;
+
+        //constructor
+
+
+
+        //member methods 
+        public int HowManyDays()
+        {
+            int n = NumberOfDays;
+            Console.WriteLine("How many days would you like to play? Enter 7, 14, or 21");
+            Console.ReadLine();
+            return n;
+        }
+
     }
 }

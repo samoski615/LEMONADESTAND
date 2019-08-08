@@ -17,8 +17,8 @@ namespace LemonadeStand
         //constructor
         public Weather()
         {
-            GetForecastedTemp();
-            GetForecastedCondition();
+            GetForecastedTemp();        //player class
+            GetForecastedCondition();   //player class
             GetActualTemp();
             GetActualCondition();
         }
