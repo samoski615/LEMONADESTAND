@@ -4,10 +4,30 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    public  class Store 
+    public class Store 
     {
         //member variables
-        private readonly int PaperCups;
+        private int PaperCups = 100;
+
+        public int paperCups
+        {
+            get
+            {
+                return PaperCups;
+            }
+            set
+            {
+                PaperCups = value;
+            }
+        }
+
+
+
+
+
+
+
+        
         int Lemons;
         int Sugar;
         int IceCubes;
@@ -19,10 +39,15 @@ namespace LemonadeStand
 
         }
         //member methods
-        public static void resupply()
-        {
+        //public static void BuyCups()
+        //{
 
-        }
+        //}
+
+      
+        
+
+        
 
 
     }

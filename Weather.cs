@@ -7,8 +7,8 @@ namespace LemonadeStand
     public class Weather
     {
         //member variables
-        int ForecastedTemp;
-        string ForecastedCondition;
+        public int ForecastedTemp;
+        public string ForecastedCondition;
         int ActualTemp;
         string ActualCondition;
 

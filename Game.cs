@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    class Game
+   public class Game
     {
        //member variables
        
@@ -17,6 +17,14 @@ namespace LemonadeStand
             UserInterface.DisplayTheRules();
             Day day = new Day();
             day.HowManyDays();
+            Weather PlayerWeather = new Weather();
+            PlayerWeather.GetForecastedCondition();
+            Console.WriteLine(PlayerWeather.ForecastedTemp);
+            PlayerWeather.GetForecastedTemp();
+            Console.WriteLine(PlayerWeather.ForecastedCondition);
+            Store store = new Store();
+            Console.WriteLine(store.paperCups);
+            
         }
 
         //member methods

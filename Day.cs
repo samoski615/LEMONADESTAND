@@ -7,7 +7,7 @@ namespace LemonadeStand
     public class Day
     {
         //member variables
-        private int NumberOfDays;
+        public int NumberOfDays;
 
         //constructor
 
