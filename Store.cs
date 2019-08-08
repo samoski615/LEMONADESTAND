@@ -6,32 +6,14 @@ namespace LemonadeStand
 {
     public class Store 
     {
-        //member variables
-        private int PaperCups = 100;
-
-        public int paperCups
-        {
-            get
-            {
-                return PaperCups;
-            }
-            set
-            {
-                PaperCups = value;
-            }
-        }
-
-
-
-
-
-
-
-        
-        int Lemons;
-        int Sugar;
-        int IceCubes;
-
+        double PaperCupsPrice;
+        int nCups;
+        double LemonsPrice;
+        int nLemons;
+        double SugarPrice;
+        int nSugar;
+        double IceCubePrice;
+        int nIceCubes;
 
         //constructor
         public Store()
@@ -39,15 +21,15 @@ namespace LemonadeStand
 
         }
         //member methods
-        //public static void BuyCups()
-        //{
+        public static void PurchaseCups()
+        {
 
-        //}
+        }
 
-      
-        
 
-        
+
+
+
 
 
     }

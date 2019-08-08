@@ -6,31 +6,33 @@ namespace LemonadeStand
 {
    public class Game
     {
-       //member variables
-       
+        //member variables
+        Day day;
+        Weather PlayerWeather = new Weather();
+        Store store = new Store();
 
         //constructor
         public Game()
         {
-            //Customer customer = new Customer();
-            //Customer.BuyLemonade();
             UserInterface.DisplayTheRules();
-            Day day = new Day();
-            day.HowManyDays();
-            Weather PlayerWeather = new Weather();
-            PlayerWeather.GetForecastedCondition();
-            Console.WriteLine(PlayerWeather.ForecastedTemp);
-            PlayerWeather.GetForecastedTemp();
-            Console.WriteLine(PlayerWeather.ForecastedCondition);
-            Store store = new Store();
-            Console.WriteLine(store.paperCups);
-            
+            day = new Day();
         }
 
         //member methods
         public void RunGame()  //start the game
         {
+            day.HowManyDays();
+            Console.WriteLine("Great!");
 
+            //Console.WriteLine("The forecast for the day is: ");
+            //PlayerWeather.GetForecastedCondition();
+            //Console.WriteLine(PlayerWeather.ForecastedTemp);
+            //PlayerWeather.GetForecastedTemp();
+            //Console.WriteLine(PlayerWeather.ForecastedCondition);
+            Console.WriteLine("\n");
+            Console.WriteLine("Purchase your supplies from the store: ");
+            Console.WriteLine("Plan accordingly");
+            day.DayOfTheWeek();
         }
     }
 }

@@ -8,6 +8,8 @@ namespace LemonadeStand
     {
         //member variables
         public int NumberOfDays;
+        public int d;
+        public Weather weather;
 
         //constructor
 
@@ -22,5 +24,20 @@ namespace LemonadeStand
             return n;
         }
 
+        //method for returning day of the week
+        public void DayOfTheWeek()
+        {
+            for (int d = 1; d < 8; d++)
+            {
+                if (d == 1)
+                {
+                    Console.WriteLine("Day" + " " + d);
+                }
+                else if (d == 2)
+                {
+                    Console.WriteLine("Day" + " " + d);
+                }
+            }
+        }
     }
 }

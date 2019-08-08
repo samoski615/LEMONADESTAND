@@ -48,7 +48,7 @@ namespace LemonadeStand
 
         public void ChanceOfBuying(Weather weather)
         {
-            //if (weather.GetActualTemp())
+            //if (weather.temperature < 50)
             {
 
             }
