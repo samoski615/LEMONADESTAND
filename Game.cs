@@ -11,6 +11,7 @@ namespace LemonadeStand
         Weather PlayerWeather = new Weather();
         Store store = new Store();
 
+
         //constructor
         public Game()
         {
@@ -23,16 +24,23 @@ namespace LemonadeStand
         {
             day.HowManyDays();
             Console.WriteLine("Great!");
-
-            //Console.WriteLine("The forecast for the day is: ");
-            //PlayerWeather.GetForecastedCondition();
-            //Console.WriteLine(PlayerWeather.ForecastedTemp);
-            //PlayerWeather.GetForecastedTemp();
-            //Console.WriteLine(PlayerWeather.ForecastedCondition);
             Console.WriteLine("\n");
+
             Console.WriteLine("Purchase your supplies from the store: ");
-            Console.WriteLine("Plan accordingly");
+            Console.WriteLine("Plan accordingly!");
+            Console.WriteLine("\n");
             day.DayOfTheWeek();
+
+            Console.WriteLine("Placeholder method for TotalPlayerMoney");
+            Console.WriteLine("Placeholder method for PlayerInventory");
+
+            Console.WriteLine("The forecast for the day is: ");
+            PlayerWeather.GetForecastedCondition();
+            Console.WriteLine(PlayerWeather.ForecastedTemp);
+            PlayerWeather.GetForecastedTemp();
+            Console.WriteLine(PlayerWeather.ForecastedCondition);
+            store.SellCups();
+
         }
     }
 }

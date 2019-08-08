@@ -20,10 +20,7 @@ namespace LemonadeStand
         }
         
         //member methods
-        public void PurchaseStuff()
-        {
-
-        }
+       
         
     }  
 }

@@ -4,20 +4,27 @@ using System.Text;
 
 namespace LemonadeStand
 {
-    //class Player
-    //{
-    //    //member variables
+   public class Player
+    {
+        //member variables
+        int TotalPaperCups;
+        int TotalLemons;
+        int TotalSugar;
+        int TotalIceCubes;
+        double TotalMoney;
+
+        //constructor
+        public Player()
+        {
+            //Store store = new Store();
+        }
 
 
-    //    //constructor
-    //    public Player()
-    //    {
-    //       
-    //    }
+        //member methods
+        public void PurchaseStuff()
+        {
 
+        }
 
-          //member methods
-           
-
-    //}
+    }
 }
