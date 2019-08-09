@@ -8,12 +8,12 @@ namespace LemonadeStand
     {
         //member variables
         Inventory Inventory;
-        
+        Store store;
 
         //constructor
         public Player()
         {
-            //Store store = new Store();
+            store = new Store();
             Inventory inventory = new Inventory();
    
         }
@@ -24,10 +24,23 @@ namespace LemonadeStand
         public void PurchaseStuff()
         {
             Console.WriteLine("Would you like to resupply? y/n");
-            //if ()
-            {
+            string UserInput = Console.ReadLine();
+            bool IsInputValid = false;
 
+            while (!IsInputValid)
+            {
+                string input = UserInput;
+                switch (input)
+                {
+                    case "y":
+                        IsInputValid = true;
+                        store.Resupply();              
+                        break;
+                    default:
+                        return;   
+               }
             }
+            
         }
 
         
@@ -35,7 +48,8 @@ namespace LemonadeStand
 
         public void LemonadeReceipe()
         {
-            //used either after purchasing from the store or redirected if a "n" is input into the console from store.Resupply
+            //used either after purchasing from the store or redirected if a "n" is input into the console from store
+            Console.WriteLine("test line for Lemonade receipe method");
         }
     }
 }

@@ -8,16 +8,18 @@ namespace LemonadeStand
     {
         //member variables
         Day day;
-        Weather PlayerWeather = new Weather();
-        Store store = new Store();
-
+        Weather PlayerWeather;
+        Store store;
+        Player player;
 
         //constructor
         public Game()
         {
             UserInterface.DisplayTheRules();
             day = new Day();
-            Store store = new Store();
+            store = new Store();
+            player = new Player();
+           PlayerWeather = new Weather();
         }
 
         //member methods
@@ -43,14 +45,15 @@ namespace LemonadeStand
 
             Console.WriteLine("\n");
            
-            Store.StorePrices();
+            store.StorePrices();
             Console.WriteLine("Show TotalPlayerMoney here");
             Console.WriteLine("show TotalPlayerInventory here");
-            Console.WriteLine("Prompt y/n for resupply");
-            Console.WriteLine("if y, redirect to Resupply method");
+            player.PurchaseStuff();
+
+            Console.WriteLine("\n");
+
             Console.WriteLine("if n, redirect to Player class/lemonade Receipe method");
-            Console.WriteLine("ask if wants paper cups/lemons/sugar/ice cubes");
-            Console.WriteLine("redirect into method to resupply");
+            player.LemonadeReceipe();
 
         }
     }
