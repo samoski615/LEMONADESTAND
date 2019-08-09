@@ -32,7 +32,7 @@ namespace LemonadeStand
             Console.WriteLine("\n");
 
             
-            day.DayOfTheWeek();
+            //day.DayOfTheWeek();
             Console.WriteLine("\n");
 
             Console.WriteLine("The forecast for the day is: ");

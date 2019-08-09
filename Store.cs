@@ -56,18 +56,35 @@ namespace LemonadeStand
             Console.WriteLine("\n");
         }
 
-        //public static string Resupply()
-        //{
-        //    Console.WriteLine("What do you need? Type '");
-           
+        public static string Resupply()
+        {
+            Console.WriteLine("What do you need? Enter 'Paper Cups', 'Lemons', 'Sugar', or 'Ice Cubes'");
+            string UserInput = Console.ReadLine();
+            bool IsInputValid = false;
 
-        //    switch (supplies)
-        //    {
-        //        case 1:
+            while (!IsInputValid)
+            {
+                string input = UserInput;
+                switch (UserInput)
+                {
+                    case "Paper Cups":
+                        break;
 
-        //        default:
-        //    }
-        //}
+                    case "Lemons":
+                        break;
+
+                    case "Sugar":
+                        break;
+
+                    case "Ice Cubes":
+                        break;
+
+                    default:
+                        return;
+                }
+            }
+            
+        }
 
 
     }
