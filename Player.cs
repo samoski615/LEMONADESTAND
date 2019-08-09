@@ -7,21 +7,19 @@ namespace LemonadeStand
    public class Player
     {
         //member variables
-        Inventory Inventory;
-        Store store;
+        Inventory inventory;
 
         //constructor
         public Player()
         {
-            store = new Store();
-            Inventory inventory = new Inventory();
+            inventory = new Inventory();
    
         }
 
 
 
         //member methods
-        public void PurchaseStuff()
+        public void PurchaseStuff(Store store)
         {
             Console.WriteLine("Would you like to resupply? y/n");
             string UserInput = Console.ReadLine();
@@ -34,7 +32,7 @@ namespace LemonadeStand
                 {
                     case "y":
                         IsInputValid = true;
-                        store.Resupply();              
+                        store.Resupply(inventory);              
                         break;
                     default:
                         return;   

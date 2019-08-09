@@ -14,8 +14,7 @@ namespace LemonadeStand
         int nSugar;
         double IceCubePrice;
         int nIceCubes;
-        Player player;
-        Inventory inventory;
+      
         
         
         //constructor
@@ -30,8 +29,6 @@ namespace LemonadeStand
             this.nIceCubes = 275;
             this.IceCubePrice = 2.50;
 
-            player = new Player();
-            inventory = new Inventory();
         }
 
         public Store()
@@ -49,7 +46,7 @@ namespace LemonadeStand
             Console.WriteLine("\n");
         }
 
-        public void Resupply()
+        public void Resupply(Inventory inventory)
         {
             Console.WriteLine("What do you need? Enter 'paper cups', 'lemons', 'sugar', or 'ice cubes'");
             string UserInput = Console.ReadLine();

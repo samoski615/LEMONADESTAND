@@ -13,7 +13,6 @@ namespace LemonadeStand
         //constructor
 
 
-
         //member methods 
         public string HowManyDays()  //method for player to indicate how many days they want to play
         {  

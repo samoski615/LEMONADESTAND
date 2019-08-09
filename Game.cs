@@ -48,7 +48,7 @@ namespace LemonadeStand
             store.StorePrices();
             Console.WriteLine("Show TotalPlayerMoney here");
             Console.WriteLine("show TotalPlayerInventory here");
-            player.PurchaseStuff();
+            player.PurchaseStuff(store);
 
             Console.WriteLine("\n");
 

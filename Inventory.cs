@@ -12,6 +12,7 @@ namespace LemonadeStand
         int tSugar;
         int tIceCubes;
         double tMoney;
+        int x;
 
         //constructor
         public Inventory(int tPaperCups, int tLemons, int tSugar, int tIceCubes, double tMoney)
@@ -23,36 +24,37 @@ namespace LemonadeStand
             this.tMoney = 0.00;
 
         }
-        public Inventory()
+        public Inventory(int x)
         {
-
+            this.x = 0;
         }
 
         //member methods
         public void PlayerTotals()
         {
-            Console.WriteLine("testing player totals");
+            Console.WriteLine("should see player inventory totals here");
         }
 
         public void GetPaperCups() //send to store for purchasing paper cups
         {
-
-            Console.WriteLine("testing paper cups method");
+            Inventory PaperCups = new Inventory(x);
+            //create formula for adding purchase to inventory
+            Console.WriteLine("get paper cups");
         }
 
         public void GetLemons()
         {
-
+            Console.WriteLine("get lemons");
         }
 
         public void GetSugar()
         {
-
+            Console.WriteLine("get sugar");
         }
 
         public void GetIceCubes()
         {
-
+            Console.WriteLine("get ice cubes");
         }
 
 
