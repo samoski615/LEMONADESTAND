@@ -14,39 +14,60 @@ namespace LemonadeStand
         int nSugar;
         double IceCubePrice;
         int nIceCubes;
-        
+        Player player;
         //constructor
         public Store()
         {
-            Player player = new Player();
+           player = new Player();
 
         }
         //member methods
-        public int SellCups()
+        public static void SellCups()
         {
-            int input = nCups;
-            Console.WriteLine("Do you need to buy paper cups?","y/n");
+
+            Console.WriteLine("Do you need to buy paper cups?", "y/n");
             Console.ReadLine();  //remember to get the user input to clear--not high priority
-            return input;
-
+            Console.WriteLine("\n");
+            Console.Write("How many paper cups do you need? You currently have: ");
+            return;
         }
 
-        public static void SellLemons()
+        //public static void SellLemons()
+        //{
+        //    Console.WriteLine("Do you need to buy lemons?", "\n");
+        //}
+
+        //public static void SellSugar()
+        //{
+        //    Console.WriteLine("Do you need to buy sugar?", "\n");
+        //}
+
+        //public static void SellIceCubes()
+        //{
+        //    Console.WriteLine("Do you need to buy ice cubes?", "\n");
+        //}
+
+        public static void StorePrices()
         {
-            Console.WriteLine("Do you need to buy lemons?", "\n");
+            Console.WriteLine("Paper Cups: $3.00 for 150 paper cups ");
+            Console.WriteLine("Lemons: $4.50 for 75 lemons ");
+            Console.WriteLine("Sugar: $2.00 for 20 cups ");
+            Console.WriteLine("Ice Cubes: $2.50 for 275 ice cubes ");
+            Console.WriteLine("\n");
         }
 
-        public static void SellSugar()
-        {
-            Console.WriteLine("Do you need to buy sugar?", "\n");
-        }
+        //public static string Resupply()
+        //{
+        //    Console.WriteLine("What do you need? Type '");
+           
 
-        public static void SellIceCubes()
-        {
-            Console.WriteLine("Do you need to buy ice cubes?", "\n");
-        }
+        //    switch (supplies)
+        //    {
+        //        case 1:
 
-
+        //        default:
+        //    }
+        //}
 
 
     }

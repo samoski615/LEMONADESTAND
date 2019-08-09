@@ -7,7 +7,6 @@ namespace LemonadeStand
     public class Day
     {
         //member variables
-        public int NumberOfDays;
         public int d;
         public Weather weather;
 
@@ -16,12 +15,15 @@ namespace LemonadeStand
 
 
         //member methods 
-        public int HowManyDays()
+        public string HowManyDays()
         {
-            int n = NumberOfDays;
             Console.WriteLine("How many days would you like to play? Enter 7, 14, or 21", " ");
-            Console.ReadLine();
-            return n;
+            string NumberOfDays = Console.ReadLine();
+            Console.Write("Great! ");
+            Console.Write("You chose to play for ");
+            Console.Write(NumberOfDays);
+            Console.Write(" days!");
+            return NumberOfDays;
         }
 
         //method for returning day of the week
@@ -29,7 +31,7 @@ namespace LemonadeStand
         {
             //for (int d = 1; d < 8; d++)
             //{
-            //        Console.WriteLine("Day" + " " + d);
+            //    Console.WriteLine("Day" + " " + d);
             //}
 
             Console.WriteLine("Placeholder for DayOftheWeek");
