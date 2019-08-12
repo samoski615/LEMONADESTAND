@@ -7,7 +7,9 @@ namespace LemonadeStand
     public class Inventory
     {
         public object TotalPaperCups { get; private set; }
-
+        public object TotalLemons { get; private set; }
+        public object TotalSugar { get; private set; }
+        public object TotalIceCubes { get; private set; }
        
         int x;
 
@@ -39,7 +41,6 @@ namespace LemonadeStand
         public void GetPaperCups() //send to store for purchasing paper cups
         {
             Inventory PaperCups = new Inventory(x); //pass info into x from store value from purchase x = 150 (x * user input for purchase)
-            PaperCups.Equals(TotalPaperCups);
             if (PaperCups == TotalPaperCups)
             {
 
