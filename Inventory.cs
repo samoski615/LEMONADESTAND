@@ -6,64 +6,41 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        public object TotalPaperCups { get; private set; }
-        public object TotalLemons { get; private set; }
-        public object TotalSugar { get; private set; }
-        public object TotalIceCubes { get; private set; }
-       
-        int x;
+        //member variables
+        //Inventory inventory;
+        
 
         //constructor
-        public Inventory(double tMoney, int tPaperCups, int tLemons, int tSugar, int tIceCubes)
-        {
-            this.TotalPaperCups = tPaperCups;
-            this.tLemons = tLemons;
-            this.tSugar = tSugar;
-            this.tIceCubes = tIceCubes;
-            this.tMoney = tMoney;
-
-        }
-        public Inventory(int x)
-        {
-            this.x = x;
-        }
-
-        public Inventory()
-        {
-        }
+        
 
         //member methods
+        
+       
+        public void AddPaperCups()
+        {
+            Console.WriteLine("get paper cups");
+        }
+        public void AddLemons()
+        {
+            Console.WriteLine("get lemons");
+        }
+
+        public void AddSugar()
+        {
+            Console.WriteLine("get sugar");
+        }
+
+        public void AddIceCubes()
+        {
+            Console.WriteLine("get ice cubes");
+        }
+
         public void PlayerTotals()
         {
             Console.WriteLine("should see player inventory totals here");
         }
 
-        public void GetPaperCups() //send to store for purchasing paper cups
-        {
-            Inventory PaperCups = new Inventory(x); //pass info into x from store value from purchase x = 150 (x * user input for purchase)
-            if (PaperCups == TotalPaperCups)
-            {
-
-            }
-            Console.WriteLine("get paper cups");
-        }
-
-        public void GetLemons()
-        {
-            Console.WriteLine("get lemons");
-        }
-
-        public void GetSugar()
-        {
-            Console.WriteLine("get sugar");
-        }
-
-        public void GetIceCubes()
-        {
-            Console.WriteLine("get ice cubes");
-        }
-
-
+        
     }
 }
 

@@ -7,33 +7,20 @@ namespace LemonadeStand
     public class Store 
     {
         double PaperCupsPrice;
-        int nCups;
+        //int tCups;
         double LemonsPrice;
         int nLemons;
         double SugarPrice;
         int nSugar;
         double IceCubePrice;
         int nIceCubes;
-        
+        //Store store;
         
         //constructor
-        public Store(double PaperCupsPrice, int nCups, double LemonsPrice, int Lemons, double SugarPrice, double IceCubePrice, int nIceCubes)
-        {
-            this.nCups = 150;
-            this.PaperCupsPrice = 3.00;
-            this.nLemons = 75;
-            this.LemonsPrice = 4.50;
-            this.nSugar = 20;
-            this.SugarPrice = 2.00;
-            this.nIceCubes = 275;
-            this.IceCubePrice = 2.50;
+        
 
-        }
-
-        public Store()
-        {
-        }
-
+        
+        
         //member methods
        
         public void StorePrices()
@@ -58,22 +45,22 @@ namespace LemonadeStand
                 {
                     case "paper cups":
                         IsInputValid = true;
-                        inventory.GetPaperCups();
+                        inventory.AddPaperCups();
                         break;
 
                     case "lemons":
                         IsInputValid = true;
-                        inventory.GetLemons();
+                        inventory.AddLemons();
                         break;
 
                     case "sugar":
                         IsInputValid = true;
-                        inventory.GetSugar();
+                        inventory.AddSugar();
                         break;
 
                     case "ice cubes":
                         IsInputValid = true;
-                        inventory.GetIceCubes();
+                        inventory.AddIceCubes();
                         break;
 
                     default:
@@ -84,30 +71,16 @@ namespace LemonadeStand
 
         }
 
+        //public int AddPaperCups()
+        //{
+        //    int nCups = 150;
+        //    int x = 0;
+        //    int tCups = x;
+        //    tCups = nCups + tCups;
+        //    return tCups;
+        //}
+
 
     }
 }
-//public void SellCups()
-//{
 
-//    Console.WriteLine("Do you need to buy paper cups?", "y/n");
-//    Console.ReadLine();  //remember to get the user input to clear--not high priority
-//    Console.WriteLine("\n");
-//    Console.Write("How many paper cups do you need? You currently have: ");
-//    return;
-//}
-
-//public static void SellLemons()
-//{
-//    Console.WriteLine("Do you need to buy lemons?", "\n");
-//}
-
-//public static void SellSugar()
-//{
-//    Console.WriteLine("Do you need to buy sugar?", "\n");
-//}
-
-//public static void SellIceCubes()
-//{
-//    Console.WriteLine("Do you need to buy ice cubes?", "\n");
-//}

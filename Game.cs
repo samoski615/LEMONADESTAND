@@ -11,7 +11,7 @@ namespace LemonadeStand
         Weather PlayerWeather;
         Store store;
         Player player;
-        Inventory newGameStart;
+        Inventory newGameStart;  
         
         //constructor
         public Game()
@@ -21,7 +21,7 @@ namespace LemonadeStand
             store = new Store();
             player = new Player();
             PlayerWeather = new Weather();
-            newGameStart = new Inventory(40.00, 0, 0, 0, 0);
+            newGameStart = new Inventory();  //remind myself to set up an Inventory object with parameters? maybe?
 
         }
 

@@ -9,15 +9,17 @@ namespace LemonadeStand
         //member variables
         //public int d;
         public Weather weather;
-
+        public List<string> Days = new List<string> { };
+        public string NumberOfDays;
         //constructor
 
 
         //member methods 
         public string HowManyDays()  //method for player to indicate how many days they want to play
-        {  
+        {
             Console.WriteLine("How many days would you like to play? Enter 7, 14, or 21", " ");
-            string NumberOfDays = Console.ReadLine();
+           
+                string NumberOfDays = Console.ReadLine();
             bool IsInputValid = false;
 
             while (!IsInputValid)
@@ -56,18 +58,46 @@ namespace LemonadeStand
             return NumberOfDays;
         }
 
+
+        public void DayOfTheWeek()
+        {
+            List<string> Days = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            switch (HowManyDays())
+            {
+                case "7":
+
+                    break;
+            }
+
+        }
         
-        //public void DayOfTheWeek()  //method for returning day of the week
-        //{
-            
-
-        //    switch (switch_on)
-        //    {
-        //        default:
-        //    }
-
-             
-        //}
-
+               
     }
+
 }
+
+
+    
+
+
+
+
+
+
+
+//List<DayOfWeek> days = new List<DayOfWeek>();
+//days.Add(DayOfWeek.Monday);
+//days.Add(DayOfWeek.Tuesday);
+//days.Add(DayOfWeek.Wednesday);
+//days.Add(DayOfWeek.Thursday);
+//days.Add(DayOfWeek.Friday);
+//days.Add(DayOfWeek.Saturday);
+//days.Add(DayOfWeek.Sunday);
+
+//foreach (var day in days)
+//{
+//    Console.WriteLine($"today is: {day}");
+//}
+
+//DayOfWeek CurrentDay = DateTime.Today.DayOfWeek;
+//Console.WriteLine("Today is {0}", CurrentDay);
