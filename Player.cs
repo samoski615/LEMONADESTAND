@@ -34,8 +34,13 @@ namespace LemonadeStand
                         IsInputValid = true;
                         store.Resupply(inventory);              
                         break;
+                    case "n":
+                        IsInputValid = true;
+                        LemonadeReceipe();
+                        break;
                     default:
-                        return;   
+                       PurchaseStuff(store);
+                        break;
                }
             }
             

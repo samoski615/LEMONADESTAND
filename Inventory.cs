@@ -6,27 +6,28 @@ namespace LemonadeStand
 {
     public class Inventory
     {
-        //member variables
-        int tPaperCups;
-        int tLemons;
-        int tSugar;
-        int tIceCubes;
-        double tMoney;
+        public object TotalPaperCups { get; private set; }
+
+       
         int x;
 
         //constructor
-        public Inventory(int tPaperCups, int tLemons, int tSugar, int tIceCubes, double tMoney)
+        public Inventory(double tMoney, int tPaperCups, int tLemons, int tSugar, int tIceCubes)
         {
-            this.tPaperCups = 0;
-            this.tLemons = 0;
-            this.tSugar = 0;
-            this.tIceCubes = 0;
-            this.tMoney = 0.00;
+            this.TotalPaperCups = tPaperCups;
+            this.tLemons = tLemons;
+            this.tSugar = tSugar;
+            this.tIceCubes = tIceCubes;
+            this.tMoney = tMoney;
 
         }
         public Inventory(int x)
         {
-            this.x = 0;
+            this.x = x;
+        }
+
+        public Inventory()
+        {
         }
 
         //member methods
@@ -37,8 +38,12 @@ namespace LemonadeStand
 
         public void GetPaperCups() //send to store for purchasing paper cups
         {
-            Inventory PaperCups = new Inventory(x);
-            //create formula for adding purchase to inventory
+            Inventory PaperCups = new Inventory(x); //pass info into x from store value from purchase x = 150 (x * user input for purchase)
+            PaperCups.Equals(TotalPaperCups);
+            if (PaperCups == TotalPaperCups)
+            {
+
+            }
             Console.WriteLine("get paper cups");
         }
 

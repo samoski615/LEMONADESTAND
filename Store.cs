@@ -14,7 +14,6 @@ namespace LemonadeStand
         int nSugar;
         double IceCubePrice;
         int nIceCubes;
-      
         
         
         //constructor
